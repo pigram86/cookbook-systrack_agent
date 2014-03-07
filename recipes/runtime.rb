@@ -19,7 +19,7 @@
 
 windows_package "runtime" do
   source node['runtime']['url']
-  options "/qn /i ALLUSERS=1 REBOOT=R"
+  options "ALLUSERS=1 REBOOT=R"
   action :install
   not_if {reboot_pending?}
 end
