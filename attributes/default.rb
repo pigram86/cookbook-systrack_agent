@@ -18,3 +18,5 @@
 #
 default['runtime']['url'] = "https://dl.dropboxusercontent.com/u/36379525/AgentRunTime.msi"
 default['management']['url'] = "https://dl.dropboxusercontent.com/u/36379525/Systems%20Management%20Agent_x32.msi"
+default['run']['file'] = "C:/Program Files (x86)/SysTrack/LsiAgent"
+default['man']['file'] = "C:/Program Files (x86)/SysTrack/LsiAgent/Utilities"

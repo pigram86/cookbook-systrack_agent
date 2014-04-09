@@ -21,6 +21,7 @@ windows_package "runtime" do
   source node['runtime']['url']
   options "ALLUSERS=1 REBOOT=R"
   action :install
+  not_if {::File.exists?(node['run']['file'])}
   not_if {reboot_pending?}
 end
 

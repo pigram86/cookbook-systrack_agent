@@ -21,6 +21,7 @@ windows_package "management" do
   source node['management']['url']
   options "ALLUSERS=1 REBOOT=R MASTERNAME=DA-SQL01.daas.local PORTNUMBER=57632"
   action :install
+  not_if {::File.exists?(node['man']['file'])}
   not_if {reboot_pending?}
 end
 
